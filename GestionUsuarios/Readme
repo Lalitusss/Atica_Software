@@ -1,0 +1,73 @@
+﻿# README - Gestión de Usuarios
+
+## 1. Requisitos Previos
+
+Antes de iniciar, asegúrate de tener instalados y configurados los siguientes elementos:
+
+1. **Visual Studio**  
+   - Versión recomendada: 2017 o superior (VS2019 recomendable).  
+   - Soporta proyectos ASP.NET Web Forms con .NET Framework 4.8.
+
+2. **SQL Server**  
+   - Puede ser Express, Developer o cualquier edición compatible.  
+   - Versión recomendada: 2016 o superior.  
+   - Asegúrate que el servidor permita conexiones remotas si la base está en otro equipo.
+
+3. **.NET Framework**  
+   - Debe estar instalado el framework 4.8 o compatible en el equipo/servidor.
+
+4. **SQL Server Management Studio (SSMS)**  
+   - Para ejecutar y administrar los scripts de base de datos.
+
+***
+
+## 2. Configuración de la Base de Datos
+
+1. **Crear Base de Datos**  
+   - En SSMS crea una base de datos nueva para el proyecto (p.ej. `GestionUsuarios`).
+
+2. **Ejecutar los Scripts SQL**  
+   - Abre el script que contiene la creación de la tabla `Usuarios` y los procedimientos almacenados.  
+   - Este script elimina (DROP) si ya existen la tabla y los procedimientos para evitar errores.  
+   - Ejecuta el script en tu base creada para crear la estructura necesaria.
+
+3. **Verificar**  
+   - Asegúrate que la tabla `Usuarios` y los procedimientos almacenados (`sp_ObtenerUsuarios`, etc.) se hayan creado correctamente.
+
+***
+
+## 3. Configuración del Proyecto
+
+1. **Abrir la solución en Visual Studio**  
+   - Abre el archivo `.sln` del proyecto.
+
+2. **Configurar cadena de conexión**  
+   - Edita el archivo `web.config` para actualizar la cadena de conexión a SQL Server con el nombre de servidor, base de datos, usuario y contraseña correctos.
+
+3. **Restaurar paquetes NuGet (si aplica)**  
+   - Generalmente para Web Forms con Bootstrap CDN no es necesario, pero si tienes paquetes, restaura desde Visual Studio.
+
+***
+
+## 4. Ejecutar la Aplicación
+
+1. **Compilar el proyecto**  
+   - Asegúrate que compile sin errores.
+
+2. **Iniciar en modo desarrollo**  
+   - Ejecuta la aplicación usando IIS Express desde Visual Studio.
+
+3. **Prueba funcionalidades**  
+   - Accede a la página principal, intenta agregar, listar y eliminar usuarios.  
+   - Verifica que se muestren mensajes de éxito/error correctamente y que la interfaz se vea con Bootstrap.
+
+***
+ 
+## 5. En caso que no levante la Aplicación
+
+1. **Pagina Inicio**
+   - Ir a la carpeta UI, seleccionar Usuarios.aspx y con el click derecho darle SET AS START PAGE.
+
+2. **Volver al punto 4**
+
+ 

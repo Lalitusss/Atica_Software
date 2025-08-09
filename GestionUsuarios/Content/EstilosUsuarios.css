@@ -1,0 +1,31 @@
+﻿/* Para inputs no tan grandes */
+.modal-body .form-control {
+    max-width: 250px;
+}
+/* Reducir altura y espacio vertical de filas de la grilla */
+#gvUsuarios th,
+#gvUsuarios td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+/* Contenedor con scroll para la tabla */
+.table-wrapper {
+    max-height: 350px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+}
+    /* Fijar encabezado */
+    .table-wrapper table thead th {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 10;
+        box-shadow: 0 2px 2px -1px rgba(0,0,0,0.4);
+    }
+/* Estilo para input búsqueda */
+#txtBuscar {
+    max-width: 300px;
+}
